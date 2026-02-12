@@ -1,0 +1,44 @@
+{
+    "students": [
+        {
+            "firstName": "John",
+            "dob": "2000-01-01",
+
+            "addresses": [
+                {
+                    "type": "Permanent",
+                    "flatNumber": 305,
+                    "street": "Galaxy Nagar",
+                    "city": "Hyderabad"
+                },
+                {
+                    "type": "Current",
+                    "flatNumber": 305,
+                    "street": "Galaxy Nagar",
+                    "city": "Hyderabad"
+                }
+            ],
+            "skills": ["Java", "DevOps", "Python"]
+        },
+        {
+            "firstName": "Joe",
+            "dob": "2002-01-01",
+
+            "addresses": [
+                {
+                    "type": "Permanent",
+                    "flatNumber": 202,
+                    "street": "RK Nagar",
+                    "city": "Bangalore"
+                },
+                {
+                    "type": "Current",
+                    "flatNumber": 202,
+                    "street": "RK Nagar",
+                    "city": "Bangalore"
+                }
+            ],
+            "skills": ["SQL", "DevOps", "Shell"]
+        }
+    ]
+}
