@@ -1,0 +1,27 @@
+- name: "Ramesh"
+  dob: "2000-01-01"
+  mobileNumber: 9876543210
+  addresses:
+  - flatNumber: 201
+    street: "Galaxy Nagar"
+    city: "Hyderabad"
+    type: "Permanent"
+
+  - flatNumber: 201
+    street: "Galaxy Nagar"
+    city: "Hyderabad"
+    type: "Current"
+
+- name: "Suresh"
+  dob: "2001-01-01"
+  mobileNumber: 9876543211
+  addresses:
+  - flatNumber: 501
+    street: "RJ Nagar"
+    city: "Bangalore"
+    type: "Permanent"
+
+  - flatNumber: 501
+    street: "RJ Nagar"
+    city: "Bangalore"
+    type: "Current"
