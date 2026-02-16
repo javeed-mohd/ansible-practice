@@ -20,4 +20,8 @@
         Duration: {{ DURATION }}
         Is Live?: {{ IS_LIVE }}
         Details: {{ DETAILS }}
-        Topics: {{ TOPICS | join('\n        ') }}
+        Topics: {{ TOPICS }}
+  - name: Print variables
+    ansible.builtin.debug:
+      msg: "  - {{ item }}"
+    loop: "{{ /n }}"
