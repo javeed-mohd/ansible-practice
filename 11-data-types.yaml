@@ -1,0 +1,23 @@
+- name: Demo on data types
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "DevSecOps with AWS" # String
+    DURATION: 140 # Integer/Number
+    IS_LIVE: true # Boolean/Bool
+    DETAILS: # Map/Dictionary (Key-value pair denoted by :/{})
+      MONTHS: 4
+      TRAINER: "Sivakumar Reddy"
+    TOPICS: # List (-/[])
+    - Linux
+    - Shell Scripting/Bash Scripting
+    - Ansible
+  tasks:
+  - name: Print variables
+    ansible.builtin.debug:
+      msg: | # We use pipe symbol if multiple lines to be executed
+        Program: {{ PROGRAM }}
+        Duration: {{ DURATION }}
+        Is Live? : {{ IS_LIVE }}
+        Details: {{ DETAILS }}
+        Topics: {{ TOPICS }}
