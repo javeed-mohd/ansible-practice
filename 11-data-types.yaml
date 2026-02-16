@@ -13,22 +13,11 @@
     - Shell Scripting/Bash Scripting
     - Ansible
   tasks:
-  # - name: Print variables
-  #   ansible.builtin.debug:
-  #     msg: | # We use Pipe(|) symbol for multiline block
-  #       Course: {{ COURSE }}
-  #       Duration: {{ DURATION }}
-  #       Is Live?: {{ IS_LIVE }}
-  #       Details: {{ DETAILS }}
-  #       Topics: {{ TOPICS }}
-  - name: Print Course
+  - name: Print variables
     ansible.builtin.debug:
-      msg: "Course: {{ COURSE }}"
-    ansible.builtin.debug:
-      msg: "Duration: {{ DURATION }}"
-    ansible.builtin.debug:
-      msg: "Is Live?: {{ IS_LIVE }}"
-    ansible.builtin.debug:
-      msg: "Details: {{ DETAILS }}"
-    ansible.builtin.debug:
-      msg: "Topics: {{ TOPICS }}"
+      msg: | # We use Pipe(|) symbol for multiline block
+        Course: {{ COURSE }}
+        Duration: {{ DURATION }}
+        Is Live?: {{ IS_LIVE }}
+        Details: {{ DETAILS }}
+        Topics: {{ TOPICS }}
