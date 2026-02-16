@@ -22,21 +22,21 @@
   #       Details: {{ DETAILS }}
   #       Topics: {{ TOPICS }}
   - name: Print Course
-      ansible.builtin.debug:
-        msg: "Course: {{ COURSE }}"
+    ansible.builtin.debug:
+      msg: "Course: {{ COURSE }}"
 
   - name: Print Duration
-      ansible.builtin.debug:
-        msg: "Duration: {{ DURATION }}"
+    ansible.builtin.debug:
+      msg: "Duration: {{ DURATION }}"
 
   - name: Print Is Live
-      ansible.builtin.debug:
-        msg: "Is Live?: {{ IS_LIVE }}"
+    ansible.builtin.debug:
+      msg: "Is Live?: {{ IS_LIVE }}"
 
   - name: Print Details
-      ansible.builtin.debug:
-        msg: "Details: {{ DETAILS }}"
+    ansible.builtin.debug:
+      msg: "Details: {{ DETAILS }}"
 
   - name: Print Topics
-      ansible.builtin.debug:
-        msg: "Topics: {{ TOPICS }}"
+    ansible.builtin.debug:
+      msg: "Topics: {{ TOPICS }}"
