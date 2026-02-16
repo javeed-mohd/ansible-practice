@@ -2,12 +2,20 @@
   hosts: local
   connection: local
   vars:
-    topics: Linux, Shell-Scripting, Ansible, Terraform # String
+    topics: Linux, Shell-Scripting, Ansible, Terraform # 1. String
+  tags: # 2. Map/Dictionary
+    name: Ansible
+    project: Roboshop
+    component: Catalogue
   tasks:
   - name: Greeting
     ansible.builtin.debug:
       msg: "Hi Javeed, {{ GREETING | default('Good Morning') }}"
 
-  - name: Convert string to list
+  - name: Convert string to list # 1
     ansible.builtin.debug:
       msg: "{{ topics | split(',') }}"
+
+  - name: Convert map to list # 2
+    ansible.builtin.debug:
+      msg: "{{ tags | dict2items }}"
