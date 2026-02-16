@@ -36,4 +36,10 @@
     ansible.builtin.debug:
       msg: "{{ tagsList | items2dict }}"
 
-  
+  - name: Read students yaml
+    ansible.builtin.set_fact: # Setting the variable
+      student_yaml: "{{ lookup('file', 'students.yaml' ) | from_yaml }}"
+
+  - name: Convert YAML to JSON
+    ansible.builtin.debug:
+      msg: "{{ student_yaml | to_nice_json  }}"
