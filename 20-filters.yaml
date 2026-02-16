@@ -24,10 +24,6 @@
     ]
 
   tasks:
-  - name: Greeting
-    ansible.builtin.debug:
-      msg: "Hi Javeed, {{ GREETING | default('Good Morning') }}"
-
   - name: Convert string to list # 1
     ansible.builtin.debug:
       msg: "{{ topics | split(',') }}"
@@ -39,3 +35,5 @@
   - name: Convert list to map # 3
     ansible.builtin.debug:
       msg: "{{ tagsList | items2dict }}"
+
+  
