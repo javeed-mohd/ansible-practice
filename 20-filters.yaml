@@ -3,7 +3,7 @@
   connection: local
   vars:
     topics: Linux, Shell-Scripting, Ansible, Terraform # 1. String
-    tags: # 2. Map/Dictionary
+    tagsMap: # 2. Map/Dictionary
       name: Ansible
       project: Roboshop
       component: Catalogue
@@ -18,4 +18,4 @@
 
   - name: Convert map to list # 2
     ansible.builtin.debug:
-      msg: "{{ tags | dict2items }}"
+      msg: "{{ tagsMap | dict2items }}"
