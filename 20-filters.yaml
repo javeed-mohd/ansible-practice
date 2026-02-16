@@ -22,6 +22,7 @@
             "value": "Catalogue"
         }
     ]
+    course: "DevSecOps with AWS" # 5. String
 
   tasks:
   - name: Convert string to list # 1
@@ -36,10 +37,14 @@
     ansible.builtin.debug:
       msg: "{{ tagsList | items2dict }}"
 
-  - name: Read students yaml
+  - name: Read students yaml # 4. Setting the variable to convert from yaml to json
     ansible.builtin.set_fact: # Setting the variable
       student_yaml: "{{ lookup('file', 'students.yaml' ) | from_yaml }}"
 
-  - name: Convert YAML to JSON
+  - name: Convert YAML to JSON # 4
     ansible.builtin.debug:
       msg: "{{ student_yaml | to_nice_json  }}"
+
+  - name: convert to upper case # 5
+    ansible.builtin.debug:
+      msg: "{{ course | upper }}"
