@@ -23,6 +23,7 @@
         }
     ]
     course: "DevSecOps with AWS" # 5 & 6. String
+    myIp: "234.56.98.567" # 7. Number/Integer
 
   tasks:
   - name: Convert string to list # 1
@@ -45,10 +46,14 @@
     ansible.builtin.debug:
       msg: "{{ student_yaml | to_nice_json  }}"
 
-  - name: convert to upper case # 5
+  - name: Convert to upper case # 5
     ansible.builtin.debug:
       msg: "{{ course | upper }}"
 
-  - name: convert to lower case # 6
+  - name: Convert to lower case # 6
     ansible.builtin.debug:
       msg: "{{ course | lower }}"
+
+  - name: Check ipv4 # 7
+    ansible.builtin.debug:
+      msg: "{{ myIp | ansible.utils.ipv4 }}"
