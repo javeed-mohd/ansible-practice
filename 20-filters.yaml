@@ -1,0 +1,13 @@
+- name: Demo on filters
+  hosts: local
+  connection: local
+  vars:
+    topics: Linux, Shell-Scripting, Ansible, Terraform # String
+  tasks:
+  - name: Greeting
+    ansible.builtin.debug:
+      msg: "Hi Javeed, {{ GREETING | default('Good Morning') }}"
+
+  - name: Convert string to list
+    ansible.builtin.debug:
+      msg: "{{ topics | split(',') }}"
