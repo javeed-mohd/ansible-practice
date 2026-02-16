@@ -1,0 +1,13 @@
+- name: Install packages
+  hosts: local
+  connection: local
+  become: yes # Getting root access
+  tasks:
+  - name: Install package
+    ansible.builtin.package:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+    loop: # List of Map
+    - { name: "zip", state: "absent"} # Map/Dictionary as it has Key-Value pair
+    - { name: "mysql", state: "present"}
+    - { name: "nginx", state: "present"}
