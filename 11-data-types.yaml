@@ -16,8 +16,8 @@
   - name: Print variables
     ansible.builtin.debug:
       msg: | # We use Pipe(|) symbol if multiple lines to be executed
-        Course: {{ COURSE }}
-        Duration: {{ DURATION }}
-        Is Live?: {{ IS_LIVE }}
-        Details: {{ DETAILS }}
+        Course: {{ COURSE\n }}
+        Duration: {{ DURATION\n }}
+        Is Live?: {{ IS_LIVE\n }}
+        Details: {{ DETAILS\n }}
         Topics: {{ TOPICS }}
