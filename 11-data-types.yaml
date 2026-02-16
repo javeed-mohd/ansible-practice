@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    COURSE: "DevSecOps with AWS" # String
+    COURSE: "DevSecOps with AWS\n" # String
     DURATION: 140 # Integer/Number
     IS_LIVE: true # Boolean/Bool
     DETAILS: # Map/Dictionary (Key-value pair denoted by :/{})
@@ -16,8 +16,8 @@
   - name: Print variables
     ansible.builtin.debug:
       msg: | # We use Pipe(|) symbol if multiple lines to be executed
-        Course: {{ COURSE\n }}
-        Duration: {{ DURATION\n }}
-        Is Live?: {{ IS_LIVE\n }}
-        Details: {{ DETAILS\n }}
+        Course: {{ COURSE }}
+        Duration: {{ DURATION }}
+        Is Live?: {{ IS_LIVE }}
+        Details: {{ DETAILS }}
         Topics: {{ TOPICS }}
