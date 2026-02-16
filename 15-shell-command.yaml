@@ -3,5 +3,6 @@
   connection: local
   tasks:
   - name: Command module test
-    ansible.builtin.command: cat /etc/passwd | grep root
+    # ansible.builtin.command: cat /etc/passwd | grep root # Piping command won't work in command
+    ansible.builtin.shell: cat /etc/passwd | grep root
     register: users_output
