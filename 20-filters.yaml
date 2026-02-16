@@ -22,7 +22,7 @@
             "value": "Catalogue"
         }
     ]
-    course: "DevSecOps with AWS" # 5. String
+    course: "DevSecOps with AWS" # 5 & 6. String
 
   tasks:
   - name: Convert string to list # 1
@@ -48,3 +48,7 @@
   - name: convert to upper case # 5
     ansible.builtin.debug:
       msg: "{{ course | upper }}"
+
+  - name: convert to lower case # 6
+    ansible.builtin.debug:
+      msg: "{{ course | lower }}"
