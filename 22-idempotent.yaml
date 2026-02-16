@@ -1,4 +1,4 @@
-- name: Check idempotent
+- name: Check idempotency
   hosts: local
   connection: local
   become: yes
