@@ -3,7 +3,7 @@
   connection: local
   tasks:
   - name: Command module test
-    # ansible.builtin.command: cat /etc/passwd | grep root # Piping command won't work in command
+    # ansible.builtin.command: cat /etc/passwd | grep root # Piping command won't work in command module
     ansible.builtin.shell: cat /etc/passwd | grep root
     register: users_output
 
@@ -12,7 +12,7 @@
       msg: "{{ users_output }}"
 
   - name: Command module test
-    # ansible.builtin.command: cat /etc/passwd | grep root # Piping command won't work in command
+    # ansible.builtin.command: cat /etc/passwd | grep root # Piping command won't work in command module
     ansible.builtin.shell: ls -ltr > files.txt
     register: files_output
 
